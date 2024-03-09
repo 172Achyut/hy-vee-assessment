@@ -20,29 +20,29 @@ const initialState: DataState = {
 
 const dataReducer = createReducer(initialState, builder => {
   builder
-    .addCase(`${actions.FETCH_AGE_DATA}_SUCCESS`, (state, action) => {
+    .addCase(`${actions.FETCH_AGE_DATA}_SUCCESS`, (state, action: any) => {
       state.name = action.payload.name;
       state.age = action.payload.age;
       state.error = null;
     })
-    .addCase(`${actions.FETCH_AGE_DATA}_FAILED`, (state, action) => {
+    .addCase(`${actions.FETCH_AGE_DATA}_FAILED`, (state, action: any) => {
       state.age = "";
       state.name = "";
       state.error = action.payload;
     })
-    .addCase(`${actions.FETCH_GENDER_DATA}_SUCCESS`, (state, action) => {
+    .addCase(`${actions.FETCH_GENDER_DATA}_SUCCESS`, (state, action: any) => {
       state.gender = action.payload;
       state.error = null;
     })
-    .addCase(`${actions.FETCH_GENDER_DATA}_FAILED`, (state, action) => {
+    .addCase(`${actions.FETCH_GENDER_DATA}_FAILED`, (state, action: any) => {
       state.gender = "";
       state.error = action.payload;
     })
-    .addCase(`${actions.FETCH_COUNTRY_DATA}_SUCCESS`, (state, action) => {
+    .addCase(`${actions.FETCH_COUNTRY_DATA}_SUCCESS`, (state, action: any) => {
       state.country = action.payload;
       state.error = null;
     })
-    .addCase(`${actions.FETCH_COUNTRY_DATA}_FAILED`, (state, action) => {
+    .addCase(`${actions.FETCH_COUNTRY_DATA}_FAILED`, (state, action: any) => {
       state.country = "";
       state.error = action.payload;
     });
