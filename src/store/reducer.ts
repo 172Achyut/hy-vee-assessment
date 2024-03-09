@@ -1,12 +1,13 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { actions } from './actions';
+import { ErrorObject } from '@/model/errorObject';
 
 interface DataState {
   name: string | null;
   age: number | string | null;
   gender: string | null;
   country: string | null;
-  error: string | null;
+  error: ErrorObject | null;
 }
 
 const initialState: DataState = {
